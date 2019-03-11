@@ -1,0 +1,6 @@
+<h1>My Puppies!</h1>
+<% @puppies.each do |puppy| %>
+  <p><%= puppy.name %></p>
+  <p><%= puppy.breed %></p>
+  <img src="<%= puppy.image %>" alt="super cute image of <%= puppy.name %>">
+<% end %>
