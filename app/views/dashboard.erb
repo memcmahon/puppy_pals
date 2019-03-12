@@ -2,14 +2,19 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title></title>
   </head>
   <body>
     <h1>My Puppies!</h1>
-    <% @puppies.each do |puppy| %>
-      <h3><%= puppy.name %></h3>
-      <p><%= puppy.breed %></p>
-      <img src="<%= puppy.image %>" alt="super cute image of <%= puppy.name %>">
-    <% end %>
+    <section class="card-deck">
+      <% @puppies.each do |puppy| %>
+      <div class="card">
+        <h3><%= puppy.name %></h3>
+        <p><%= puppy.breed %></p>
+        <img src="<%= puppy.image %>" alt="super cute image of <%= puppy.name %>" class='img-fluid'>
+      </div>
+      <% end %>
+    </section>
   </body>
 </html>
