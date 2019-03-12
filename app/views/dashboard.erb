@@ -6,7 +6,7 @@
   </head>
   <body>
     <h1>My Puppies!</h1>
-      <% @puppies.each do |puppy| %>
+    <% @puppies.each do |puppy| %>
       <h3><%= puppy.name %></h3>
       <p><%= puppy.breed %></p>
       <img src="<%= puppy.image %>" alt="super cute image of <%= puppy.name %>">
